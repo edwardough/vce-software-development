@@ -3,7 +3,6 @@ import math
 def convertTime( athTime, targetFormat ):
     if targetFormat == "mm:ss":
         # This means the time variable is in seconds
-        result = []
         minutes = math.floor( athTime / 60 )
         if minutes == 0:
             minutes = "00"
@@ -14,7 +13,8 @@ def convertTime( athTime, targetFormat ):
             seconds = "00"
         elif seconds < 10:
             seconds = "0" + str(seconds)
-        return str(minutes) + ":" + str(seconds)
+        # use the str function in case they are still integers
+        return str(minutes) + ":" + str(seconds) 
     elif targetFormat == 'sec':
         # This means the time variable is in mm:ss
         result = list(athTime.split(sep=":"))
