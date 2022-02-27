@@ -13,3 +13,4 @@ while guess != True:
             print("Too high, wanna cry?")
     except ValueError:
         print("Please enter a number.")
+input("Thanks for playing, [ENTER] to end.")
